@@ -3,7 +3,7 @@
  */
 package de.viadee.springCoreDemo;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,9 +18,12 @@ public class BasicDependenciesTest {
     @Autowired
     String hey;
 
+    @Autowired
+    SampleController sampleController;
+
     @Test
     public void test() {
-        fail(hey);
+        assertNotNull(sampleController);
     }
 
 }
