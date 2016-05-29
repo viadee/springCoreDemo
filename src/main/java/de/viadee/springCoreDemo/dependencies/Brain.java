@@ -1,11 +1,12 @@
-/**
- * 
- */
+
 package de.viadee.springCoreDemo.dependencies;
 
+/**
+ * This is a sample object that can perform sophisticated philosophy operations, as long as it is initialized properly.
+ */
 public class Brain {
 
-    private boolean awake = false;
+    private boolean awake;
 
     public boolean isAwake() {
         return awake;
@@ -16,11 +17,11 @@ public class Brain {
     }
 
     public String thinkAbout(final String question) {
+        String result = "Zzz";
         if (awake) {
-            return "42";
-        } else {
-            return "Zzz";
+            result = "42";
         }
+        return result;
     }
 
 }

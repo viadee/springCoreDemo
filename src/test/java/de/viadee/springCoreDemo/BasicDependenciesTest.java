@@ -10,17 +10,21 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(MyConfiguration.class)
-public class BasicDependenciesTest {
+public class BasicDependenciesTest { // NOPMD
 
     @Autowired
-    String hey;
+    private String hey;
 
     @Autowired
-    SampleController sampleController;
+    private SampleController sampleController;
 
     @Test
-    public void test() {
+    public void testAutowireString() {
         assertNotNull("The greeting string should be injected here.", hey);
+    }
+
+    @Test
+    public void testAutowireController() {
         assertNotNull("The sample controller singleton should be injeceted here", sampleController);
     }
 

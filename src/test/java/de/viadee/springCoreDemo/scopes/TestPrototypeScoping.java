@@ -1,10 +1,8 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.scopes;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertSame;
 
 import java.util.List;
 import java.util.Set;
@@ -16,16 +14,23 @@ import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import de.viadee.springCoreDemo.MyConfiguration;
+import de.viadee.springCoreDemo.SampleController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(MyConfiguration.class)
 public class TestPrototypeScoping {
 
-    @Autowired
-    Bush<Strawberry> bush;
+    @Autowired(required = false)
+    private Bush<Strawberry> bush;
+
+    @Autowired(required = false)
+    private List<Strawberry> oneBerryFromEachBeanDeclaration;
 
     @Autowired
-    List<Strawberry> oneBerryFromEachBeanDeclaration;
+    private SampleController sampleController1;
+
+    @Autowired
+    private SampleController sampleController2;
 
     @Test
     public void testPrototypeBeanInjection() {
@@ -48,4 +53,11 @@ public class TestPrototypeScoping {
                 berries.contains(oneBerryFromEachBeanDeclaration.get(0)));
     }
 
+    @Test
+    public void testSingletonBeanInjection() {
+        // Given the controller is a singleton as per default
+        // When we inject it twice
+        // The the same object should arrive
+        assertSame("Controller is not in singleton scope.", sampleController1, sampleController2);
+    }
 }

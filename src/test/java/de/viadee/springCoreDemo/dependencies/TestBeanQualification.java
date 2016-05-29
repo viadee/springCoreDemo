@@ -29,9 +29,13 @@ public class TestBeanQualification {
 
     @Test
     public void testBasicSetupWithQualifiers() {
+        // Given the bean factory wired all dependencies here
+        // The movie should be injected
         assertNotNull("Desired movie is not initialized.", lordOfTheRings);
+        // Two different actors should be injected
         assertNotNull("Frodo is missing.", a);
         assertNotNull("Gandalf is missing.", b);
+        // Both are part of the movie
         assertTrue("Frodo must be part of the movie.", lordOfTheRings.getActors().contains(a));
         assertTrue("Gandalf must be part of the movie.", lordOfTheRings.getActors().contains(b));
     }

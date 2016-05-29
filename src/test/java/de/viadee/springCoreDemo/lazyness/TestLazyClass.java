@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.lazyness;
 
 import static org.junit.Assert.assertEquals;
@@ -12,12 +9,15 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import de.viadee.springCoreDemo.MyConfiguration;
 
+/**
+ * Test lazy loading of beans.
+ */
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(MyConfiguration.class)
-public class TestLazyClass {
+public class TestLazyClass { // NOPMD
 
     @Test
-    public void testLazyInitialization() {
+    public void testLazyInitialization() { // NOPMD
         // Given the spring context is fully initialized at this point,
 
         // when we examine the number of instances of the lazy class
