@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.dependencies;
 
 import static org.junit.Assert.assertNotNull;
@@ -20,7 +17,7 @@ import de.viadee.springCoreDemo.MyConfiguration;
 public class TestBeanQualification {
 
     @Autowired(required = false)
-    private Movie LotR;
+    private Movie lordOfTheRings;
 
     @Autowired(required = false)
     @Qualifier("elijahWood")
@@ -31,11 +28,11 @@ public class TestBeanQualification {
     private Actor b;
 
     @Test
-    public void TestBasicSetupWithQualifiers() {
-        assertNotNull("Desired movie is not initialized.", LotR);
+    public void testBasicSetupWithQualifiers() {
+        assertNotNull("Desired movie is not initialized.", lordOfTheRings);
         assertNotNull("Frodo is missing.", a);
         assertNotNull("Gandalf is missing.", b);
-        assertTrue("Frodo must be part of the movie.", LotR.getActors().contains(a));
-        assertTrue("Gandalf must be part of the movie.", LotR.getActors().contains(b));
+        assertTrue("Frodo must be part of the movie.", lordOfTheRings.getActors().contains(a));
+        assertTrue("Gandalf must be part of the movie.", lordOfTheRings.getActors().contains(b));
     }
 }

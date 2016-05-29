@@ -6,7 +6,7 @@ package de.viadee.springCoreDemo.lazyness;
  */
 public class LazyClass {
 
-    public static long instanceCounter = 0;
+    public static long instanceCounter;
 
     public LazyClass() {
         instanceCounter++;

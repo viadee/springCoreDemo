@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo;
 
 import static org.junit.Assert.assertNotNull;
@@ -23,7 +20,8 @@ public class BasicDependenciesTest {
 
     @Test
     public void test() {
-        assertNotNull(sampleController);
+        assertNotNull("The greeting string should be injected here.", hey);
+        assertNotNull("The sample controller singleton should be injeceted here", sampleController);
     }
 
 }
