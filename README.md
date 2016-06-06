@@ -18,3 +18,8 @@ Rules and hints
 - All tests can be started (and passed) independently
 - Tests may not interfere with each other
 - Do not access the bean factory or context classes directly (i.e. using anything anlong the lines of a getBean(..)-Statement is prohibited)
+
+License
+=======
+To the extent possible under law, Frank Köhne (viadee Unternehmensberatung GmbH) has waived all copyright and related or neighboring rights to the springCoreDemo published here.
+For more information see http://creativecommons.org/publicdomain/zero/1.0/
