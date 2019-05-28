@@ -6,7 +6,7 @@ import java.util.Set;
 public class Bush<T> {
 
     /**
-     * A bush can have a set of indiviual berries.
+     * A bush can have a set of individual berries.
      */
     private final Set<T> berries;
 

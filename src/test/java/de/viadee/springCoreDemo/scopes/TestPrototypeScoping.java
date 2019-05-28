@@ -40,16 +40,16 @@ public class TestPrototypeScoping {
         final Set<Strawberry> berries = bush.getBerries();
 
         // then
-        assertEquals("there should be two berries on the bush.", 2, berries.size());
+        assertEquals("There should be two berries on the bush.", 2, berries.size());
         // This implies, that there are two instances of Strawberry.
         // Hence, the berries can not be in singleton scope.
 
         // We receive a new berry each time, a berry is declared as a dependency, if berries are in prototype scope
-        assertEquals("there should be only one bean declaration for strawberries.", 1,
+        assertEquals("There should be only one bean declaration for strawberries.", 1,
                 oneBerryFromEachBeanDeclaration.size());
 
         // Therefore, the sample berry is - again - a different one.
-        assertFalse("the sample berry directly injected here can not be on the bush.",
+        assertFalse("The sample berry directly injected here can not be on the bush.",
                 berries.contains(oneBerryFromEachBeanDeclaration.get(0)));
     }
 

@@ -17,7 +17,7 @@ Rules and hints
 - Prefer centralised constructor injection over setter-injection or annotation based DI configurations
 - All tests can be started (and passed) independently
 - Tests may not interfere with each other
-- Do not access the bean factory or context classes directly (i.e. using anything anlong the lines of a getBean(..)-Statement is prohibited)
+- Do not access the bean factory or context classes directly (i.e. using anything along the lines of a getBean(..)-Statement is prohibited)
 
 License
 =======

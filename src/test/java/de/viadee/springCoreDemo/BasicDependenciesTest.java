@@ -25,7 +25,7 @@ public class BasicDependenciesTest { // NOPMD
 
     @Test
     public void testAutowireController() {
-        assertNotNull("The sample controller singleton should be injeceted here", sampleController);
+        assertNotNull("The sample controller singleton should be injected here.", sampleController);
     }
 
 }

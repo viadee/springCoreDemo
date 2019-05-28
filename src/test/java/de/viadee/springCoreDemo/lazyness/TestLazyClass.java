@@ -24,7 +24,7 @@ public class TestLazyClass { // NOPMD
         final long instances = LazyClass.instanceCounter;
 
         // then
-        assertEquals("there should be no instances of the lazy class.", 0L, instances);
+        assertEquals("There should be no instances of the lazy class.", 0L, instances);
         // Since we do not need an instance right now, since no bean depends on it,
         // although a bean definition is part of the configuration
     }

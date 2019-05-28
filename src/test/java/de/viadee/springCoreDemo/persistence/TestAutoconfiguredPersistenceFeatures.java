@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.persistence;
 
 import static org.junit.Assert.assertEquals;
@@ -32,7 +29,7 @@ public class TestAutoconfiguredPersistenceFeatures {
     private PersonRepository personRepository;
 
     @Test
-    public void testPeristenceAutoconfig() {
+    public void testPersistenceAutoconfig() {
         // Given a the autoconfig features of spring boot
         // and the h2-jar on the classpath
 
@@ -48,13 +45,13 @@ public class TestAutoconfiguredPersistenceFeatures {
 
         // the Person-Entity should be found and an empty table should be created
         // at this point
-        assertEquals("something went wrong with hbm2dd and the creation of the person table.", Integer.valueOf(0),
+        assertEquals("Something went wrong with hbm2dd and the creation of the person table.", Integer.valueOf(0),
                 jdbcTemplate.queryForObject("SELECT count(*) FROM person", Integer.class));
     }
 
     @Test
     public void testJPARepositoryOperations() {
-        // Given the automatically configured data source and empty table and the automaticaly generated repository
+        // Given the automatically configured data source and empty table and the automatically generated repository
         // implementation
 
         // When we insert a new person
@@ -74,7 +71,7 @@ public class TestAutoconfiguredPersistenceFeatures {
         // Given the transactional execution of other tests
         // When we query all persons here
         // Then the number of entries in the person table should be zero
-        assertEquals("There should be one person in the db.", Long.valueOf(0), Long.valueOf(personRepository.count()));
+        assertEquals("There should be no person in the db.", Long.valueOf(0), Long.valueOf(personRepository.count()));
     }
 
     @Test
