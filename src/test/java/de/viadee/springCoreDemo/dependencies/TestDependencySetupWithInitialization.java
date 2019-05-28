@@ -5,18 +5,19 @@ package de.viadee.springCoreDemo.dependencies;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import de.viadee.springCoreDemo.MyConfiguration;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(MyConfiguration.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = MyConfiguration.class)
 public class TestDependencySetupWithInitialization {
 
     @Autowired
@@ -46,7 +47,7 @@ public class TestDependencySetupWithInitialization {
         // Given brain is defined as a singleton bean (default)
         // when we inject it here again,
         // then we should receive the identical object
-        assertTrue("the brain is not defined as a singleton", answeringService.getBrain() == this.brain);
+        assertSame("the brain is not defined as a singleton", answeringService.getBrain(), this.brain);
     }
 
     @Test

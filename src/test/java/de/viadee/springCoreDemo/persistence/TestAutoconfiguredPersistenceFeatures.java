@@ -12,14 +12,14 @@ import javax.sql.DataSource;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import de.viadee.springCoreDemo.MyConfiguration;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(MyConfiguration.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = MyConfiguration.class)
 public class TestAutoconfiguredPersistenceFeatures {
 
     @Autowired

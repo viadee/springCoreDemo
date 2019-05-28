@@ -4,16 +4,16 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import de.viadee.springCoreDemo.MyConfiguration;
 
 /**
  * Test lazy loading of beans.
  */
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(MyConfiguration.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = MyConfiguration.class)
 public class TestLazyClass { // NOPMD
 
     @Test
