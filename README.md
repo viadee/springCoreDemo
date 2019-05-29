@@ -6,7 +6,7 @@ be fixed by extending the Spring configuration, which we plan to do in a univers
 
 Requirements
 ============
-- Java 7+ and an understanding of the java language and basic patterns such as the singleton and the factory pattern
+- Java 8+ and an understanding of the java language and basic patterns such as the singleton and the factory pattern
 - Maven 3+ or an IDE that includes appropriate support for maven builds
 
 Rules and hints
