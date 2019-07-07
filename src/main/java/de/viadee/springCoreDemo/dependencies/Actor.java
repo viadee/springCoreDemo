@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.dependencies;
 
 import org.springframework.beans.factory.BeanNameAware;

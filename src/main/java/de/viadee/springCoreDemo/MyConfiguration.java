@@ -3,6 +3,7 @@ package de.viadee.springCoreDemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 import de.viadee.springCoreDemo.lazyness.LazyClass;
 
@@ -10,6 +11,7 @@ import de.viadee.springCoreDemo.lazyness.LazyClass;
  * Configure the dependencies of the applications components.
  */
 @SpringBootApplication
+@ComponentScan(useDefaultFilters = false)
 public class MyConfiguration {
 
     public static void main(final String[] args) {

@@ -19,7 +19,7 @@ public class GreetingController {
 
     /**
      * @param template
-     *            A String template that forms the basis for userspecific greetings.
+     *            A String template that forms the basis for user-specific greetings.
      */
     public GreetingController(final String template) {
         this.template = template;

@@ -6,7 +6,7 @@ be fixed by extending the Spring configuration, which we plan to do in a univers
 
 Requirements
 ============
-- Java 7+ and an understanding of the java language and basic patterns such as the singleton and the factory pattern
+- Java 8+ and an understanding of the java language and basic patterns such as the singleton and the factory pattern
 - Maven 3+ or an IDE that includes appropriate support for maven builds
 
 Rules and hints
@@ -17,7 +17,7 @@ Rules and hints
 - Prefer centralised constructor injection over setter-injection or annotation based DI configurations
 - All tests can be started (and passed) independently
 - Tests may not interfere with each other
-- Do not access the bean factory or context classes directly (i.e. using anything anlong the lines of a getBean(..)-Statement is prohibited)
+- Do not access the bean factory or context classes directly (i.e. using anything along the lines of a getBean(..)-Statement is prohibited)
 
 License
 =======

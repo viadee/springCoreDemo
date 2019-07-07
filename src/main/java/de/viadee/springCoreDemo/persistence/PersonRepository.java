@@ -1,4 +1,3 @@
-
 package de.viadee.springCoreDemo.persistence;
 
 import org.springframework.data.repository.CrudRepository;

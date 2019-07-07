@@ -5,11 +5,11 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(MyConfiguration.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest(classes = MyConfiguration.class)
 public class BasicDependenciesTest { // NOPMD
 
     @Autowired
@@ -25,7 +25,7 @@ public class BasicDependenciesTest { // NOPMD
 
     @Test
     public void testAutowireController() {
-        assertNotNull("The sample controller singleton should be injeceted here", sampleController);
+        assertNotNull("The sample controller singleton should be injected here.", sampleController);
     }
 
 }

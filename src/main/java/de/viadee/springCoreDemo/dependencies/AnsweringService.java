@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.dependencies;
 
 public class AnsweringService {

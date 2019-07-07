@@ -1,6 +1,3 @@
-/**
- * 
- */
 package de.viadee.springCoreDemo.dependencies;
 
 import java.util.HashSet;
@@ -10,7 +7,7 @@ import org.springframework.beans.factory.BeanNameAware;
 
 public class Movie implements BeanNameAware {
 
-    public Set<Actor> actors = new HashSet<Actor>();
+    private Set<Actor> actors = new HashSet<>();
 
     private String name;
 
