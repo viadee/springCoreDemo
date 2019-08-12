@@ -1,8 +1,11 @@
 Purpose
 =======
 This is an introductory example into Spring Core and dependency injection, including e.g. simple REST-style services.
+
 It contains a number of unit tests that, in the sense of test-driven development, currently fail. They can, however, easily
-be fixed by extending the Spring configuration, which we plan to do in a university workshop at Münster, Germany.
+be fixed by extending the Spring configuration.
+
+This material has been used for a number of seminars and in introductory lecture at the University of Münster, Germany.
 
 Requirements
 ============
@@ -23,3 +26,5 @@ License
 =======
 To the extent possible under law, Frank Köhne (viadee Unternehmensberatung GmbH) has waived all copyright and related or neighboring rights to the springCoreDemo published here.
 For more information see http://creativecommons.org/publicdomain/zero/1.0/
+
+If you use the material, we would be happy to hear from you.
